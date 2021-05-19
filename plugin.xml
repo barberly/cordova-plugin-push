@@ -92,7 +92,6 @@
   </platform>
 
   <platform name="ios">
-    <preference name="IOS_FIREBASE_MESSAGING_VERSION" default="~> 8.1.1"/>
 
     <config-file target="config.xml" parent="/*">
       <feature name="PushNotification">
@@ -118,17 +117,8 @@
     <source-file src="src/ios/PushPlugin.m"/>
     <header-file src="src/ios/AppDelegate+notification.h"/>
     <header-file src="src/ios/PushPlugin.h"/>
-
     <framework src="PushKit.framework"/>
 
-    <podspec>
-      <config>
-        <source url="https://cdn.cocoapods.org/"/>
-      </config>
-      <pods use-frameworks="true">
-        <pod name="Firebase/Messaging" spec="$IOS_FIREBASE_MESSAGING_VERSION" />
-      </pods>
-    </podspec>
   </platform>
 
   <platform name="windows">
